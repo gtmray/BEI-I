@@ -23,7 +23,7 @@ public class SubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pdflist);
         pdfListView = (ListView) findViewById(R.id.myPDFlist);
-        String[] pdfFiles = {"Microprocessor CH-1", "Microprocessor CH-2","Advanced Topics","Mathematics Guide", };
+        String[] pdfFiles = {"Microprocessor CH-1", "Microprocessor CH-2","Advanced Topics","C++ Notes", };
         ArrayAdapter<String> adpater = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, pdfFiles) {
             @NonNull
             @Override

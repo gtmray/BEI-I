@@ -22,8 +22,8 @@ PDFView myPDFViewer;
         if(getItem.equals("Advanced Topics")){
             myPDFViewer.fromAsset("Advanced Topics.pdf").load();
         }
-        if(getItem.equals("Mathematics Guide")){
-            myPDFViewer.fromAsset("Maths Guide.pdf").load();
+        if(getItem.equals("C++ Notes")){
+            myPDFViewer.fromAsset("C++ Notes.pdf").load();
         }
 
     }

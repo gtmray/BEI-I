@@ -3,6 +3,7 @@ package com.example.bei;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     new MessageFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_person);
         }
+
     }
 
     @Override
@@ -50,14 +54,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.notify:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new NotificationFragment()).commit();
-//
- //               Toast.makeText(this, "Send", Toast.LENGTH_SHORT).show();
                 break;
-//            case R.id.nav_share:
-//                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
-//                break;
-                case R.id.nav_send:
-                Toast.makeText(this, "Send", Toast.LENGTH_SHORT).show();
+            case R.id.events:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new EventFragment()).commit();
+                break;
+                case R.id.gallery:
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            new Gallery()).commit();
+                    break;
+            case R.id.about:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new About()).commit();
+
                 break;
         }
 
